@@ -30,7 +30,7 @@ public class Softbodies : MonoBehaviour
             }
             catch
             {
-                Debug.Log("spline points too close!");
+                //Debug.Log("spline points too close!");
                 spriteShape.spline.SetPosition(i, (_vertex - _towardsCenter * (_colliderRadius + splineOffset)));
             }
 
