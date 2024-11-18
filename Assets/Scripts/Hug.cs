@@ -10,7 +10,7 @@ public class Hug : MonoBehaviour
     }
     void Update()
     {
-        
+
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
