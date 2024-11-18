@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour
     {
         Vector3 midpos = (Player1.transform.position + Player2.transform.position) / 2.0f;
         Vector3 distanceDiff = Player1.transform.position - Player2.transform.position;
-        Debug.Log(distanceDiff);
+        //Debug.Log(distanceDiff);
         if (Mathf.Abs(distanceDiff.x) > 15 || Mathf.Abs(distanceDiff.y) > 10)
         {
             GetComponent<Camera>().orthographicSize = 10;
@@ -33,7 +33,7 @@ public class CameraFollow : MonoBehaviour
     }
     void UpdateCamPos(Vector3 newmidpos)
     {
-        Debug.Log("updated cam pos");
+        //Debug.Log("updated cam pos");
         midEmpty.transform.position = newmidpos;
         transform.position = newmidpos + offset;
     }
