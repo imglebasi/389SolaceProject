@@ -32,7 +32,8 @@ public class Door : MonoBehaviour
         {
             isLocked = false;
             Destroy(GetComponent<BoxCollider2D>());
-            GetComponent<SpriteRenderer>().color = opaque;
+            Destroy(GetComponent<SpriteRenderer>());
+            //GetComponent<SpriteRenderer>().color = opaque;
         }
         else
         {

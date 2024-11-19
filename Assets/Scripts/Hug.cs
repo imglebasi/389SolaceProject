@@ -17,7 +17,7 @@ public class Hug : MonoBehaviour
         if (collision.TryGetComponent<Hug>(out var otherHug))
         {
             isSafe = true;
-            collision.GetComponent<CircleCollider2D>().radius = 2f;
+            collision.GetComponent<CircleCollider2D>().radius = 2.5f;
         }
     }
     public void OnTriggerExit2D(Collider2D other)
