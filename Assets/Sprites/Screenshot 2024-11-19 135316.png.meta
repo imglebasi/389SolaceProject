@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bdb37d7b356680e4c92043be88d58620
+guid: 877ed23a3ed3b464b82f49fa17437c15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4893095528658558703
-    second: Screenshot 2024-11-19 135449_0
+      213: -3444281205108696511
+    second: Screenshot 2024-11-19 135316_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,43 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Screenshot 2024-11-19 135449_0
+      name: Screenshot 2024-11-19 135316_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1102
-        height: 729
+        width: 1105
+        height: 737
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: feedeb56574c7e340800000000000000
-      internalID: 4893095528658558703
+      spriteID: 14a11f61e747330d0800000000000000
+      internalID: -3444281205108696511
       vertices: []
       indices: 
       edges: []
@@ -132,7 +158,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Screenshot 2024-11-19 135316_0: -3444281205108696511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
