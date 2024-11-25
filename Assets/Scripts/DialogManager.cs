@@ -8,6 +8,7 @@ namespace Dialogue
 {
     public class DialogManager : MonoBehaviour
     {
+        //public Canvas canvas;
         public Image actorImage;
         public TextMeshProUGUI actorName;
         public TextMeshProUGUI messageText;
@@ -23,10 +24,10 @@ namespace Dialogue
             currentMessages = messages;
             currentActors = actors;
             activeMessage = 0;
-
             isActive = true;
 
             DisplayMessage();
+            backgroundBox.LeanScale(Vector3.one, 0.5f);
         }
 
         void DisplayMessage()
@@ -37,6 +38,8 @@ namespace Dialogue
             Actor actorToDisplay = currentActors[messageToDisplay.actorID];
             actorName.text = actorToDisplay.name;
             actorImage.sprite = actorToDisplay.sprite;
+
+            AnimateTextColor();
         }
         public void NextMessage()
         {
@@ -47,13 +50,21 @@ namespace Dialogue
             }
             else { Debug.Log("convo ended");
             isActive = false;
+                backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
             }
+        }
+
+        void AnimateTextColor()
+        {
+            LeanTween.textAlpha(messageText.rectTransform, 0, 0);
+            LeanTween.textAlpha(messageText.rectTransform, 1, 0.5f);
         }
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-
+            //have box closed
+            backgroundBox.transform.localScale = Vector3.zero;
         }
 
         // Update is called once per frame
@@ -66,6 +77,12 @@ namespace Dialogue
             {
                 Debug.Log(isActive);
             }
+
+            /*if (!isActive)
+            {
+                canvas.enabled = false;
+            }
+            else { canvas.enabled = true; }*/
         }
     }
 }

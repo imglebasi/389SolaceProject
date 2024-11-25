@@ -14,7 +14,7 @@ namespace Dialogue
         private bool isPlayerInTrigger = false;
         public bool hasBeenStarted = false;
 
-        public bool requiresEToStart = true;
+        //public bool requiresEToStart = true;
 
         public void StartDialogue() {
             Debug.Log("started dialogue!");
