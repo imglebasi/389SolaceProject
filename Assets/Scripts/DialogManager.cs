@@ -1,35 +1,71 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 using TMPro;
 
-public class DialogManager : MonoBehaviour
+namespace Dialogue
 {
-    public Image actorImage;
-    public TextMeshProUGUI actorName;
-    public TextMeshProUGUI messageText;
-    public RectTransform backgroundBox;
-
-
-    int activeMessage = 0;
-
-    public void OpenDialogue(Message[] messages, Actor[] actors)
+    public class DialogManager : MonoBehaviour
     {
-        currentMessages = messages;
-        currentActors = actors;
-        activeMessage = 0;
-    }
+        public Image actorImage;
+        public TextMeshProUGUI actorName;
+        public TextMeshProUGUI messageText;
+        public RectTransform backgroundBox;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+        Message[] currentMessages;
+        Actor[] currentActors;
+        int activeMessage = 0;
+        public static bool isActive = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void OpenDialogue(Message[] messages, Actor[] actors)
+        {
+            currentMessages = messages;
+            currentActors = actors;
+            activeMessage = 0;
+
+            isActive = true;
+
+            DisplayMessage();
+        }
+
+        void DisplayMessage()
+        {
+            Message messageToDisplay = currentMessages[activeMessage];
+            messageText.text = messageToDisplay.message;
+
+            Actor actorToDisplay = currentActors[messageToDisplay.actorID];
+            actorName.text = actorToDisplay.name;
+            actorImage.sprite = actorToDisplay.sprite;
+        }
+        public void NextMessage()
+        {
+            activeMessage++;
+            if (activeMessage < currentMessages.Length)
+            {
+                DisplayMessage();
+            }
+            else { Debug.Log("convo ended");
+            isActive = false;
+            }
+        }
+
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && isActive == true) {
+                NextMessage();
+            }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log(isActive);
+            }
+        }
     }
 }

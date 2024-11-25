@@ -1,29 +1,37 @@
 using UnityEngine;
 
-public class ClickToMove : MonoBehaviour
+namespace Dialogue
 {
-    public float speed = 5f;
-    public GameObject Player;
-    //private Rigidbody2D rb;
-    private Vector3 target;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class ClickToMove : MonoBehaviour
     {
-        target = transform.position;
-        //rb = GetComponent<Rigidbody2D>();
-    }
+        //public DialogManager DM;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
+        public float speed = 5f;
+        public GameObject Player;
+        //private Rigidbody2D rb;
+        private Vector3 target;
+
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        void Start()
         {
-            target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            target.z = transform.position.z;
-
+            target = transform.position;
+            //rb = GetComponent<Rigidbody2D>();
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        // Update is called once per frame
+        void Update()
+        {
+            if (DialogManager.isActive) return;
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                target.z = transform.position.z;
+
+            }
+
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
     }
 }
