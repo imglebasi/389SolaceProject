@@ -6,6 +6,8 @@ public class CameraSmooth : MonoBehaviour
 {
     public Transform target;
     public float smoothing;
+    public float offsetx;
+    public float offsety;
 
     void FixedUpdate()
     {
@@ -15,6 +17,12 @@ public class CameraSmooth : MonoBehaviour
 
         transform.position = Vector3.Lerp
         (transform.position,
-        targetPosition, smoothing * Time.deltaTime);
+        new Vector3(targetPosition.x + offsetx, targetPosition.y + offsety, targetPosition.z), smoothing * Time.deltaTime);
+    }
+
+    public void ChangeOffset(float x, float y)
+    {
+        offsetx = x;
+        offsety = y;
     }
 }
