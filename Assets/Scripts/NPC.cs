@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 namespace Dialogue {
     public class NPC : MonoBehaviour
@@ -10,6 +11,8 @@ namespace Dialogue {
         public bool needInput;
         public DialogTrigger trigger;
 
+        public bool hasEffect;
+        public Image effectOverlay;
         public TextMeshProUGUI tooltip;
 
         /* private void OnTriggerEnter2D(Collider2D collision)
@@ -42,6 +45,10 @@ namespace Dialogue {
                 }
                 playerInTrigger = true;
             }
+            if (hasEffect)
+            {
+                effectOverlay.enabled = true;
+            }
         }
         private void OnTriggerExit2D(Collider2D collision)
         {
@@ -52,6 +59,10 @@ namespace Dialogue {
 
                 //let u trigger events again
                 canstartDialogue = true;
+            }
+            if (hasEffect)
+            {
+                effectOverlay.enabled = false;
             }
         }
 

@@ -501,6 +501,104 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &202570255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 202570256}
+  - component: {fileID: 202570259}
+  - component: {fileID: 202570258}
+  - component: {fileID: 202570257}
+  m_Layer: 5
+  m_Name: AlarmRedOverlay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &202570256
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202570255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 19.609, y: 11.51, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 640161987}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -1820, y: -980}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &202570257
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202570255}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 58ca8f980e4ae994f9f23ae0f21193ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &202570258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202570255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.07450981}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &202570259
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202570255}
+  m_CullTransparentMesh: 1
 --- !u!1 &228649256
 GameObject:
   m_ObjectHideFlags: 0
@@ -616,6 +714,36 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: -5, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -1, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 15, y: -1, z: 0}
     second:
       serializedVersion: 2
@@ -641,6 +769,36 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 4
       m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -5, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 11
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: -1, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 9
+      m_TileSpriteIndex: 9
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 11
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -988,7 +1146,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: f0159980c26ed3d479739203903b1129, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 0991326d408edd940b660d8688003bc0, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 0c3f302898efd5246af9910515d86663, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: d5a655f1ac1b908448ebfd8dd6049a77, type: 2}
@@ -996,10 +1154,12 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 545d58a64059c6e458b4f6fd4c5e3c73, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8155c867a2f74fd48bd3be6a0e656f4d, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 186701ffc01ce2840b2aa7e37eca3e6f, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 6f516b4d9ed04fa4aa862c05040281cc, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: f309acffab6f1524babeca84ca0f0292, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 3
     m_Data: {fileID: 463202320, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
@@ -1011,7 +1171,7 @@ Tilemap:
     m_Data: {fileID: 175022788, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -714849362, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 1649997587, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 134798373, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
@@ -1019,12 +1179,14 @@ Tilemap:
     m_Data: {fileID: -1759815468, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1662238983, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 97067686, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 4
     m_Data: {fileID: -1983937859, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: -1182021350, guid: 3a632f450051936458cdeaeb425fc98b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 37
+  - m_RefCount: 43
     m_Data:
       e00: 1
       e01: 0
@@ -1061,7 +1223,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 38
+  - m_RefCount: 44
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -22750,7 +22912,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628120248}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c9bc59aef833344aa6a93968d6ddbe3, type: 3}
   m_Name: 
@@ -22759,6 +22921,8 @@ MonoBehaviour:
   playerInTrigger: 0
   needInput: 1
   trigger: {fileID: 628120250}
+  hasEffect: 0
+  effectOverlay: {fileID: 0}
   tooltip: {fileID: 1004442033}
 --- !u!114 &628120250
 MonoBehaviour:
@@ -22767,7 +22931,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628120248}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d7f72f9096830a4496ae73cf847659b, type: 3}
   m_Name: 
@@ -22872,7 +23036,7 @@ Transform:
   m_GameObject: {fileID: 628120248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3, y: 0, z: 0}
+  m_LocalPosition: {x: -7.21, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22885,7 +23049,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628120248}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -23097,22 +23261,138 @@ MonoBehaviour:
   Manager: {fileID: 1138431439}
   messages:
   - actorID: 0
-    message: player talking
+    message: "It\u2019s worse than I thought. No coolant, no propulsion. Even if
+      I patch the conduits, there\u2019s no fuel left to pump. This ship isn\u2019t
+      going anywhere.\r"
+    image: {fileID: 0}
+  - actorID: 0
+    message: "The pressure\u2019s dropping too fast. Even if I reroute the flow and
+      seal the breach, we don\u2019t have enough left to power a single jump."
     image: {fileID: 0}
   - actorID: 1
-    message: radan talking
+    message: ...
     image: {fileID: 0}
-  - actorID: 2
-    message: orion talking
+  - actorID: 1
+    message: "You ever just\u2026 stop and think about how small we are? Like, really
+      small. Out here, in the middle of all this? We\u2019re just specks."
     image: {fileID: 0}
-  - actorID: 3
-    message: felix talking
+  - actorID: 0
+    message: "You? Thinking about the big picture? Never thought I\u2019d see the
+      day your hot-headed skull cools down to think for a second. Let alone ponder."
+    image: {fileID: 0}
+  - actorID: 1
+    message: "Well don\u2019t get used to it. It\u2019s not like I\u2019m about to
+      start singing poetry or some other bullcrap. Just\u2026 sometimes it\u2019s
+      nice."
+    image: {fileID: 0}
+  - actorID: 1
+    message: "The quiet. There are enough reasons to be upset at the world, its good
+      to find some space from it all and just\u2026 breathe."
     image: {fileID: 0}
   - actorID: 4
-    message: arden talking
+    message: "The ship\u2019s always so loud. The crew, the engines, the comms\u2014it\u2019s
+      constant. \r"
+    image: {fileID: 0}
+  - actorID: 4
+    message: "Out here, though? It\u2019s just us. No bullshit. Just the stars.\r"
+    image: {fileID: 0}
+  - actorID: 2
+    message: You don't get stars like these on Earth- here, they're up close you
+      can almost reach out and touch them.
+    image: {fileID: 0}
+  - actorID: 0
+    message: " I\u2019m not sure how long we can last like this. If I can\u2019t
+      fix the tanks, if I can\u2019t find another way\u2026 we\u2019re not going
+      anywhere."
+    image: {fileID: 0}
+  - actorID: 2
+    message: "I\u2019m supposed to keep us together, keep us safe. But some days...
+      it feels like I\u2019m one wrong decision away from breaking everything. "
+    image: {fileID: 0}
+  - actorID: 2
+    message: But it wasn't my decision, what's happening. and soon, decisions won't
+      matter much anyways.
+    image: {fileID: 0}
+  - actorID: 3
+    message: Wait, that's it? we're not leaving? like ever?
+    image: {fileID: 0}
+  - actorID: 0
+    message: " Unless a miracle ship comes by and picks up our signal\u2014which
+      they won\u2019t, because the comms are dead too\u2014we\u2019re stranded."
+    image: {fileID: 0}
+  - actorID: 3
+    message: " I should\u2019ve known. I should\u2019ve run more simulations before
+      we left. What if I missed something? What if this is all my fault?\r\n"
+    image: {fileID: 0}
+  - actorID: 0
+    message: "It\u2019s not on anyone. The crash... it\u2019s just bad luck."
+    image: {fileID: 0}
+  - actorID: 1
+    message: ...
+    image: {fileID: 0}
+  - actorID: 2
+    message: ...
+    image: {fileID: 0}
+  - actorID: 3
+    message: ...
+    image: {fileID: 0}
+  - actorID: 4
+    message: ...
+    image: {fileID: 0}
+  - actorID: 2
+    message: Remember that time we got stuck orbiting that derelict station? You
+      know, the one where Ronan swore she could rig the thrusters with duct tape
+      and a prayer?
+    image: {fileID: 0}
+  - actorID: 1
+    message: "Could\u2019ve worked if someone hadn\u2019t overcomplicated things
+      with \u2018safety protocols.\r"
+    image: {fileID: 0}
+  - actorID: 4
+    message: " Right. Because explosive decompression is just a minor inconvenience.\r\n\r"
+    image: {fileID: 0}
+  - actorID: 3
+    message: "\u2026I still think about that karaoke night on Starport B-17. Ren,
+      you absolutely butchered that song. What was it called? \u2018Burning Stars\u2019
+      or something?"
+    image: {fileID: 0}
+  - actorID: 0
+    message: ' It was Shining Comets, and I stand by my performance.'
+    image: {fileID: 0}
+  - actorID: 2
+    message: ...
+    image: {fileID: 0}
+  - actorID: 2
+    message: "I... I just want to say that I couldn\u2019t have asked for a better
+      crew. If this is it\u2014if this is the end\u2014I\u2019m glad it\u2019s with
+      all of you."
+    image: {fileID: 0}
+  - actorID: 4
+    message: " Here\u2019s to us."
+    image: {fileID: 0}
+  - actorID: 1
+    message: "Even if we\u2019re about to be cosmic dust"
+    image: {fileID: 0}
+  - actorID: 2
+    message: "\u2026For the stars we chased, and the ones we leave behind."
+    image: {fileID: 0}
+  - actorID: 3
+    message: Do you think it'll... hurt?
+    image: {fileID: 0}
+  - actorID: 1
+    message: "Probably. But it\u2019ll be quick."
+    image: {fileID: 0}
+  - actorID: 2
+    message: "Stick together. That\u2019s what matters."
+    image: {fileID: 0}
+  - actorID: 3
+    message: Here goes...
+    image: {fileID: 0}
+  - actorID: 2
+    message: See you guys on the other side
     image: {fileID: 0}
   actors:
-  - name: YN
+  - name: Ren
     sprite: {fileID: 21300000, guid: ef866739b3804bb49a4325190c02c8a2, type: 3}
   - name: Radan
     sprite: {fileID: 21300000, guid: a3a269e8f6769a74082349e6bd416840, type: 3}
@@ -23139,6 +23419,8 @@ MonoBehaviour:
   playerInTrigger: 0
   needInput: 0
   trigger: {fileID: 634926042}
+  hasEffect: 1
+  effectOverlay: {fileID: 202570258}
   tooltip: {fileID: 1004442033}
 --- !u!60 &634926044
 PolygonCollider2D:
@@ -23287,6 +23569,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 202570256}
   - {fileID: 1138431436}
   - {fileID: 1004442032}
   - {fileID: 995263873}
@@ -23405,7 +23688,7 @@ Transform:
   m_GameObject: {fileID: 774509522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.05, y: 0, z: 0}
+  m_LocalPosition: {x: 2.05, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23418,7 +23701,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774509522}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -23464,7 +23747,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774509522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d7f72f9096830a4496ae73cf847659b, type: 3}
   m_Name: 
@@ -23490,7 +23773,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 774509522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c9bc59aef833344aa6a93968d6ddbe3, type: 3}
   m_Name: 
@@ -23499,6 +23782,8 @@ MonoBehaviour:
   playerInTrigger: 0
   needInput: 1
   trigger: {fileID: 774509527}
+  hasEffect: 0
+  effectOverlay: {fileID: 0}
   tooltip: {fileID: 1004442033}
 --- !u!70 &774509529
 CapsuleCollider2D:
@@ -23990,8 +24275,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -389}
-  m_SizeDelta: {x: -151.7606, y: -868.8658}
+  m_AnchoredPosition: {x: 0, y: -342.80902}
+  m_SizeDelta: {x: -151.7606, y: -776.4838}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1138431437
 MonoBehaviour:
@@ -24134,7 +24419,7 @@ Transform:
   m_GameObject: {fileID: 1261230333}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.03, y: 0, z: 0}
+  m_LocalPosition: {x: -9.48, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24154,15 +24439,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Manager: {fileID: 1138431439}
   messages:
+  - actorID: 2
+    message: shit. Ren what happened to you??
+    image: {fileID: 0}
   - actorID: 0
-    message: I am the player
+    message: "\u2026 who?\r"
+    image: {fileID: 0}
+  - actorID: 2
+    message: "Now's not the time to play around Ren, we need to get your head checked.
+      Arden come over here and look at this.\r"
     image: {fileID: 0}
   - actorID: 1
-    message: 'and I am the npc '
+    message: "oh yeah that's bad. Shes fucked.\r"
+    image: {fileID: 0}
+  - actorID: 1
+    message: "Ren. Does that name ring a bell to you?\r"
+    image: {fileID: 0}
+  - actorID: 0
+    message: "\u2026No?\u2026 is it supposed to?\r\n\r"
+    image: {fileID: 0}
+  - actorID: 1
+    message: that's your name. Do you remember who you are? Do you remember any of
+      us?
+    image: {fileID: 0}
+  - actorID: 0
+    message: "I know I\u2019m supposed to fix this ship\u2026 and that you piss me
+      off"
+    image: {fileID: 0}
+  - actorID: 1
+    message: ' HA! Same as ever, even after getting the memory whacked out of you.
+      You are a mechanic on this ship and we were sent to deliver some goods a few
+      planets over. '
+    image: {fileID: 0}
+  - actorID: 1
+    message: As you can see though that hasn't exactly gone as planned.
+    image: {fileID: 0}
+  - actorID: 2
+    message: " I think some of you are forgetting the very pressing matter that to
+      fix the ship and fly it out of this shit hole asteroid we need a mechanic.
+      \r"
+    image: {fileID: 0}
+  - actorID: 2
+    message: "Like I don\u2019t know\u2026 REN. How the fuck are we gonna get out
+      of this mess if the one person meant for the job can\u2019t do what they came
+      here to do.\r"
+    image: {fileID: 0}
+  - actorID: 1
+    message: "Ronan your temper never helps. She's got a slight case of amnesia.
+      But give her some time and she\u2019ll get back up on her own. She\u2019s still
+      got that kick in her I\u2019m sure she\u2019ll figure it out. \r"
+    image: {fileID: 0}
+  - actorID: 2
+    message: "Well haha I hate to say it butttt we\u2019re in a bit of a time crunch,
+      we only have so many rations left and 5 people will burn through that real
+      fast. "
+    image: {fileID: 0}
+  - actorID: 2
+    message: "While cannibalism is a viable option to buy us more time I\u2019d rather
+      not have it come to that and my chances of survival in an all-out brawl for
+      who doesn't end up the Thanksgiving turkey is close to zero.\r"
+    image: {fileID: 0}
+  - actorID: 0
+    message: No it's fine. Let me. Running this ship is all I remember anyway. Let
+      me help.
     image: {fileID: 0}
   actors:
-  - name: Y/N
+  - name: ???
     sprite: {fileID: 21300000, guid: ef866739b3804bb49a4325190c02c8a2, type: 3}
+  - name: Arden
+    sprite: {fileID: 4873423461518087176, guid: a534631e0dca0dc4a81fd1497be91494, type: 3}
   - name: Ronan
     sprite: {fileID: 21300000, guid: a3a269e8f6769a74082349e6bd416840, type: 3}
   hasBeenStarted: 0
@@ -24200,7 +24545,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.1449602, y: -0.18566906}
+  m_Offset: {x: 2.62, y: -0.18566906}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24210,7 +24555,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 6.18, y: 4}
   m_EdgeRadius: 0
 --- !u!114 &1261230339
 MonoBehaviour:
@@ -24228,6 +24573,8 @@ MonoBehaviour:
   playerInTrigger: 0
   needInput: 1
   trigger: {fileID: 1261230337}
+  hasEffect: 0
+  effectOverlay: {fileID: 0}
   tooltip: {fileID: 1004442033}
 --- !u!95 &1261230340
 Animator:
@@ -24530,7 +24877,7 @@ Transform:
   m_GameObject: {fileID: 1459571602}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.96, y: 0, z: 0}
+  m_LocalPosition: {x: 0.82, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24551,16 +24898,62 @@ MonoBehaviour:
   Manager: {fileID: 1138431439}
   messages:
   - actorID: 0
-    message: Hello captain Orion
+    message: "Coolant breach. Fuel lines are ruptured, and the magnetic containment
+      field's shot to hell. This isn\u2019t just a patch job. It\u2019s a death sentence."
+    image: {fileID: 0}
+  - actorID: 0
+    message: "The surge must\u2019ve hit during the crash. It melted the fuel line
+      connections and overloaded the containment coils. If the field destabilizes
+      again, the entire core could implode."
+    image: {fileID: 0}
+  - actorID: 0
+    message: "How do you even START to fix this\u2026"
+    image: {fileID: 0}
+  - actorID: 2
+    message: "Ren, if you don\u2019t stop frowning, your face is going to get stuck
+      like that. Then if we come across intelligiant life they\u2019ll think all
+      humans have a scary perpetual scowl"
+    image: {fileID: 0}
+  - actorID: 2
+    message: "-and then they\u2019ll want to go to war cause they think we\u2019re
+      all scary and mean!"
+    image: {fileID: 0}
+  - actorID: 0
+    message: "Better than meeting them with your expression. They\u2019d think we\u2019re
+      always about five seconds from a nervous breakdown"
+    image: {fileID: 0}
+  - actorID: 2
+    message: "Wow. Rude. I\u2019m not anxious or frazzled! I\u2019m just well prepared
+      and thought you know. Hey Orion, are you hearing this?\r"
     image: {fileID: 0}
   - actorID: 1
-    message: Things are looking good cadet! i will keep being a captain
+    message: "You two bicker like an old married couple. It\u2019s almost impressive.
+      Besides, be realistic. If aliens existed we would have met them by now and
+      I doubt they'd care what Ren thinks of them.\r"
+    image: {fileID: 0}
+  - actorID: 2
+    message: "No, really, Ren you need to relax. One of these days, all that grumpiness
+      is going to turn into a black hole, and then where will we be? Stuck in your
+      gravitational pull of misery!\r"
+    image: {fileID: 0}
+  - actorID: 1
+    message: "You know, sometimes it\u2019s okay to just\u2026 sit. Rest. Not solve
+      anything. Not plan anything. Just breathe.\r"
+    image: {fileID: 0}
+  - actorID: 1
+    message: "Thats why being part of a team is so crucial, you have people helping
+      you when the world gets to be too much. You can get some comfort in one another.\r"
+    image: {fileID: 0}
+  - actorID: 1
+    message: "Captains orders!\r"
     image: {fileID: 0}
   actors:
-  - name: Y/N
+  - name: Ren
     sprite: {fileID: 21300000, guid: ef866739b3804bb49a4325190c02c8a2, type: 3}
   - name: Orion
     sprite: {fileID: 21300000, guid: b13eaedeac51454459f15a82e945b249, type: 3}
+  - name: Felix
+    sprite: {fileID: 21300000, guid: a2036232768b444469e5b85025b92ce8, type: 3}
   hasBeenStarted: 0
 --- !u!114 &1459571607
 MonoBehaviour:
@@ -24578,6 +24971,8 @@ MonoBehaviour:
   playerInTrigger: 0
   needInput: 1
   trigger: {fileID: 1459571606}
+  hasEffect: 0
+  effectOverlay: {fileID: 0}
   tooltip: {fileID: 1004442033}
 --- !u!61 &1459571609
 BoxCollider2D:
@@ -24613,7 +25008,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 1.3209062, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24623,7 +25018,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 6.6418114, y: 4}
   m_EdgeRadius: 0
 --- !u!70 &1459571610
 CapsuleCollider2D:
@@ -24696,8 +25091,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 168.95, y: 60.663}
-  m_SizeDelta: {x: 337.89, y: 332.46}
+  m_AnchoredPosition: {x: 192.26013, y: 37.407516}
+  m_SizeDelta: {x: 384.5103, y: 378.331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662231820
 MonoBehaviour:
@@ -24884,8 +25279,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 165.65, y: -33.56}
-  m_SizeDelta: {x: -378.37, y: 105.7305}
+  m_AnchoredPosition: {x: 193.97827, y: -30.673904}
+  m_SizeDelta: {x: -412.5435, y: 215.2539}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868832702
 MonoBehaviour:
@@ -25056,8 +25451,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -139, y: 52.381}
-  m_SizeDelta: {x: -987.6758, y: 66.1513}
+  m_AnchoredPosition: {x: -104.52, y: 102.2686}
+  m_SizeDelta: {x: -1009.5, y: 50.6307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967218714
 MonoBehaviour:
