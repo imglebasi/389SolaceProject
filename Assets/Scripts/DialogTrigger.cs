@@ -11,7 +11,6 @@ namespace Dialogue
         public Message[] messages;
         public Actor[] actors;
 
-        private bool isPlayerInTrigger = false;
         public bool hasBeenStarted = false;
 
         //public bool requiresEToStart = true;

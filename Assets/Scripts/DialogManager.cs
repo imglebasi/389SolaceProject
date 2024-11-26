@@ -19,6 +19,8 @@ namespace Dialogue
         int activeMessage = 0;
         public static bool isActive = false;
 
+        public bool replayable;
+
         public void OpenDialogue(Message[] messages, Actor[] actors)
         {
             currentMessages = messages;
