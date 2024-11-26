@@ -5,8 +5,9 @@ namespace Dialogue {
     public class NPC : MonoBehaviour
     {
         
-        public bool startDialogue;
+        public bool canstartDialogue;
         public bool playerInTrigger;
+        public bool needInput;
         public DialogTrigger trigger;
 
         public TextMeshProUGUI tooltip;
@@ -35,7 +36,10 @@ namespace Dialogue {
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                tooltip.text = "E";
+                if (needInput)
+                {
+                    tooltip.text = "E";
+                }
                 playerInTrigger = true;
             }
         }
@@ -45,6 +49,9 @@ namespace Dialogue {
             {
                 playerInTrigger = false;
                 tooltip.text = "";
+
+                //let u trigger events again
+                canstartDialogue = true;
             }
         }
 
@@ -52,6 +59,7 @@ namespace Dialogue {
         void Start()
         {
             tooltip.text = "";
+            canstartDialogue = true;
         }
 
         // Update is called once per frame
@@ -59,10 +67,24 @@ namespace Dialogue {
         {
             if (playerInTrigger)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                Debug.Log("Player in trigger");
+                if (needInput)
                 {
-                    tooltip.text = "";
-                    trigger.StartDialogue();
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        tooltip.text = "";
+                        trigger.StartDialogue();
+                        canstartDialogue = false;
+                    }
+                }
+                else //do not need input
+                {
+                    Debug.Log("triggering w/o input");
+                    if (canstartDialogue)
+                    {
+                        trigger.StartDialogue();
+                        canstartDialogue = false;
+                    }
                 }
             }
         }

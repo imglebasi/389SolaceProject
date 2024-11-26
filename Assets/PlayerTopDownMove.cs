@@ -19,7 +19,7 @@ namespace Dialogue
         void Update()
         {
             if (DialogManager.isActive) return;
-            Debug.Log("accepting input!");
+            //Debug.Log("accepting input!");
             float directionX = Input.GetAxisRaw("Horizontal");
             float directionY = Input.GetAxisRaw("Vertical");
             playerDirection = new Vector2(directionX, directionY).normalized;
