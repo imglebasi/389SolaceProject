@@ -10,6 +10,7 @@ public class CameraSmooth : MonoBehaviour
     public float offsetx;
     public float offsety;
     public float defaultCamSize;
+    private float currentSize;
 
     void FixedUpdate()
     {
@@ -32,12 +33,22 @@ public class CameraSmooth : MonoBehaviour
         offsetx = x;
         offsety = y;
     }
-    public void ChangeSize(float size, bool doChangeCam)
+    public IEnumerator ChangeSize(float size, bool doChangeCam, float time)
     {
+        currentSize = cam.orthographicSize;
+
         if (doChangeCam)
         {
-            cam.orthographicSize = size;
+            float elapsed = 0;
+            while (elapsed <= time)
+            {
+                elapsed += Time.deltaTime;
+                float t = Mathf.Clamp01(elapsed / time);
+                Debug.Log("started cam change process");
+                cam.orthographicSize = Mathf.Lerp(currentSize, size, Time.deltaTime);
+                yield return null;
+            }
         }
-        else { cam.orthographicSize = defaultCamSize; }
+        else { Debug.Log("reset"); cam.orthographicSize = defaultCamSize; }
     }
 }

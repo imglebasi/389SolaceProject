@@ -14,7 +14,8 @@ public class CameraTriggers : MonoBehaviour
         {
             //offset x = 0, y = 3 to frame scene better
             cam.ChangeOffset(offsetx,offsety);
-            cam.ChangeSize(camSize, true);
+            StartCoroutine(cam.ChangeSize(camSize, true, 1));
+            //cam.ChangeSize(camSize, true);
         }
     }
     public void OnTriggerExit2D(Collider2D collision)
@@ -23,10 +24,10 @@ public class CameraTriggers : MonoBehaviour
         {
             //reset
             cam.ChangeOffset(0, 0);
-            if(camSize > 0)
+            /*if(camSize > 0)
             {
                 cam.ChangeSize(camSize, false);
-            }
+            }*/
         }
     }
 }

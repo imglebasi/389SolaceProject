@@ -15,9 +15,9 @@ namespace Dialogue
 
         //public bool requiresEToStart = true;
 
-        public void StartDialogue() {
+        public void StartDialogue(int scene) {
             Debug.Log("started dialogue!");
-            Manager.OpenDialogue(messages, actors);
+            Manager.OpenDialogue(messages, actors, scene);
         }
     }
 

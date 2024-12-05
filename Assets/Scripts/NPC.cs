@@ -5,15 +5,20 @@ using UnityEngine.UI;
 namespace Dialogue {
     public class NPC : MonoBehaviour
     {
+        private bool canStartDialogue;
+        private bool playerInTrigger;
         
-        public bool canstartDialogue;
-        public bool playerInTrigger;
+        //check if player needs to press E
         public bool needInput;
         public DialogTrigger trigger;
 
+        //if some visual or sfx should play
         public bool hasEffect;
-        public Image effectOverlay;
+        public GameObject effectOverlay;
         public TextMeshProUGUI tooltip;
+
+        //set this so diff things trigger
+        public int sceneNum;
 
         /* private void OnTriggerEnter2D(Collider2D collision)
          {
@@ -47,7 +52,8 @@ namespace Dialogue {
             }
             if (hasEffect)
             {
-                effectOverlay.enabled = true;
+                Debug.Log("has effect, trigger it!");
+                effectOverlay.SetActive(true);
             }
         }
         private void OnTriggerExit2D(Collider2D collision)
@@ -58,11 +64,11 @@ namespace Dialogue {
                 tooltip.text = "";
 
                 //let u trigger events again
-                canstartDialogue = true;
+                canStartDialogue = true;
             }
             if (hasEffect)
             {
-                effectOverlay.enabled = false;
+                effectOverlay.SetActive(false);
             }
         }
 
@@ -70,7 +76,7 @@ namespace Dialogue {
         void Start()
         {
             tooltip.text = "";
-            canstartDialogue = true;
+            canStartDialogue = true;
         }
 
         // Update is called once per frame
@@ -78,23 +84,23 @@ namespace Dialogue {
         {
             if (playerInTrigger)
             {
-                Debug.Log("Player in trigger");
+                //Debug.Log("Player in trigger");
                 if (needInput)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
                         tooltip.text = "";
-                        trigger.StartDialogue();
-                        canstartDialogue = false;
+                        trigger.StartDialogue(sceneNum);
+                        canStartDialogue = false;
                     }
                 }
                 else //do not need input
                 {
-                    Debug.Log("triggering w/o input");
-                    if (canstartDialogue)
+                    //Debug.Log("triggering w/o input");
+                    if (canStartDialogue)
                     {
-                        trigger.StartDialogue();
-                        canstartDialogue = false;
+                        trigger.StartDialogue(sceneNum);
+                        canStartDialogue = false;
                     }
                 }
             }

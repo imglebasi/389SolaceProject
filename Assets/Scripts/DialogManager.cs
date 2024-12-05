@@ -19,10 +19,15 @@ namespace Dialogue
         int activeMessage = 0;
         public static bool isActive = false;
 
-        public bool replayable;
+        //public bool replayable;
+        public int currentScene;
+        public int finalScene;
 
-        public void OpenDialogue(Message[] messages, Actor[] actors)
+        public void OpenDialogue(Message[] messages, Actor[] actors, int scene)
         {
+            Debug.Log("playing scene: " + scene);
+            currentScene = scene;
+
             currentMessages = messages;
             currentActors = actors;
             activeMessage = 0;
@@ -53,6 +58,12 @@ namespace Dialogue
             else { Debug.Log("convo ended");
             isActive = false;
                 backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo();
+                
+                //if final scene ends...
+                if(currentScene == finalScene)
+                {
+                    Debug.Log("played final scene- CUE EXPLOSIONS!!");
+                }
             }
         }
 
@@ -75,10 +86,11 @@ namespace Dialogue
             if (Input.GetKeyDown(KeyCode.Space) && isActive == true) {
                 NextMessage();
             }
+            /*
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log(isActive);
-            }
+            }*/
 
             /*if (!isActive)
             {
